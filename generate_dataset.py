@@ -1,4 +1,4 @@
-# Tyle mamy rekordów w pliku: 115 949 436
+# Liczba rekordów w pliku: 115 949 436
 
 # Przykładowy rekord:
 # Time, Duration, SrcDevice, DstDevice, Protocol, SrcPort, DstPort, SrcPackets, DstPackets, SrcBytes, DstBytes
@@ -34,6 +34,7 @@ for device in devices:
 devicesFile.close()
 
 # Etap 3: Wybranie kilku urządzeń z listy, na których będzie wykonywany atak
+
 number_of_devices_to_scan = 16
 devices_to_scan = []
 devicesFile = open("devices.txt", "r")
@@ -46,12 +47,6 @@ devicesFile.close()
 
 attack_dataset = open("attack.csv", "w")
 open_ports = ["20", "21", "22", "23", "80", "443"]
-
-# devices_to_scan = [ "Comp845403", "Comp333799", "Comp004336", "Comp209752",
-#                     "Comp158783", "Comp847702", "Comp199697", "Comp672433", 
-#                     "Comp240723", "Comp439974", "Comp939617", "Comp953664",
-#                      "Comp012705", "Comp250941", "Comp269928","Comp663320",
-#                      "Comp431564", "Comp485628", "Comp567269"]
 
 start_time = 118845 # Ustalenie czasu, w którym atak miał miejsce
 index = 0 # Numer skanowanego komputera i zarazem modyfikator czasu ataku
@@ -85,8 +80,3 @@ for i in range(34,1000000):
 
 final_dataset.close()
 original_dataset.close()
-
-
-
-
-        
